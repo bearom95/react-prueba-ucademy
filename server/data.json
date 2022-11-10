@@ -1,0 +1,53 @@
+{
+    "users": {
+        "students": [
+
+            {"name": "Iker",
+            "surname":"Romero",
+            "username": "iromero1",
+            "email": "iker@gmail.com",
+            "phone": 679742640,
+            "courses": ["javascript", "css", "typescript"],
+            "id": 1},
+           
+            {"name": "Mario",
+            "surname":"Hernandez",
+            "username": "jhernandez1",
+            "email": "josu@gmail.com",
+            "phone": 671172146,
+            "courses": ["javascript", "typescript"],
+            "id": 2},
+
+            {"name": "Josu",
+            "surname":"Romero",
+            "username": "iromero1",
+            "email": "iker@gmail.com",
+            "phone": 671742645,
+            "courses": ["css", "typescript"],
+            "id": 3}
+        ],
+
+        "teachers": 
+        [
+            {"name": "Antonio",
+            "surname":"Rosales",
+            "username": "arosales1",
+            "email": "antonio@gmail.com",
+            "phone": 679772141,
+            "courses": ["javascript", "css"],
+            "id": 4},
+
+            {"name": "Alberto",
+            "surname":"Rivera",
+            "username": "arivera1",
+            "email": "alberto@gmail.com",
+            "phone": 679775149,
+            "courses": ["javascript", "typescript"],
+            "id": 5}
+        ]
+    },
+    "courses":{
+        "javascript": [],
+        "css": []
+    }
+}
