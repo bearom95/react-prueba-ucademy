@@ -13,7 +13,6 @@ import { Parraf } from '../componentsui/Parraf';
 import { Div } from '../componentsui/StyledDiv';
 import { Button } from './Button';
 /* const LoginStyledDiv = styled.div`
-
   button {
     all: unset;
   }
@@ -31,7 +30,7 @@ export const StyledForm = styled.form`
 
   .nameinput {
     all: unset;
-    background-color: white;
+    background-color: var(--white);
     width: 100%;
     border: 1px solid #dbdbdb;
     border-radius: 8px;
@@ -49,7 +48,6 @@ export const StyledForm = styled.form`
   .checkbox {
     outline: none;
     cursor: pointer;
-    background-color: green;
     border-radius: none;
     width: 16px;
     height: 16px;
@@ -68,7 +66,8 @@ export const StyledForm = styled.form`
 
 export const Login = () => {
   const [passwordShown, setPasswordShown] = useState(false);
-  const togglePasswordVisiblity = () => {
+  const togglePasswordVisiblity = (ev) => {
+    ev.preventDefault();
     setPasswordShown(passwordShown ? false : true);
   };
   const {
@@ -135,6 +134,7 @@ export const Login = () => {
             borderradius="8px"
             border="1px solid #DBDBDB;"
             backgr="white"
+            height="2.5rem"
           >
             <input
               {...register('password', {
@@ -156,7 +156,12 @@ export const Login = () => {
               className="passinput"
               type={passwordShown ? 'text' : 'password'}
             />
-            <Button className="eye" eye onClick={togglePasswordVisiblity}>
+            <Button
+              type="button"
+              className="eye"
+              eye
+              onClick={(ev) => togglePasswordVisiblity(ev)}
+            >
               {!passwordShown ? (
                 <AiOutlineEyeInvisible cursor={'pointer'} />
               ) : (

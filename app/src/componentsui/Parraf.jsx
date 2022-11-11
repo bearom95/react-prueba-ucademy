@@ -1,12 +1,19 @@
 import styled, { css } from 'styled-components';
 
 const ParrafStyled = styled.p`
+  color: black;
+
   ${(props) => {
-    const { backgr, fontcolor, fontsize } = props;
+    const { backgr, fontcolor, fontsize, fontfamily, padding, fontweight, lineheight } =
+      props;
     return css`
       background-color: ${backgr};
       color: ${fontcolor};
       font-size: ${fontsize};
+      font-family: ${fontfamily};
+      padding: ${padding};
+      font-weight: ${fontweight};
+      line-height: ${lineheight};
     `;
   }}
 `;

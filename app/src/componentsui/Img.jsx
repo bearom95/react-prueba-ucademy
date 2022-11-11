@@ -2,16 +2,19 @@ import styled, { css } from 'styled-components';
 
 export const StyledImg = styled.img`
   ${(props) => {
-    const { backgr, display, flexwrap, flexdir, objectfit, cursor } = props;
+    const { backgr, flexwrap, padding, flexdir, objectfit, cursor, height, width } =
+      props;
     return css`
       background-color: ${backgr};
-      display: ${display};
       flex-wrap: ${flexwrap};
       flex-direction: ${flexdir};
       object-fit: ${objectfit};
       cursor: ${cursor};
+      height: ${height};
+      width: ${width};
+      padding: ${padding};
     `;
-  }}
+  }};
 `;
 export const Img = (props) => {
   return <StyledImg {...props}></StyledImg>;

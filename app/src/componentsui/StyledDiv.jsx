@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const StyledDiv = styled.div`
   box-sizing: border-box;
+
   ${(props) => {
     const {
       backgr,
@@ -19,6 +20,7 @@ export const StyledDiv = styled.div`
       padding,
       margin,
       align,
+      borderbottom,
     } = props;
     return css`
       background-color: ${backgr};
@@ -36,6 +38,7 @@ export const StyledDiv = styled.div`
       padding: ${padding};
       margin: ${margin};
       align-items: ${align};
+      border-bottom: ${borderbottom};
     `;
   }}
 `;

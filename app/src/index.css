@@ -7,3 +7,23 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/* PALETTE */ 
+:root {
+  --black: #262D34;
+  --white: #FFFFFF;
+  --green: #0ABB87;
+  --grey: #9E9E9E;
+  --offlinegrey: #F0F4F3;
+}
+
+:root {
+  background-color: var(--white);
+}
+
+main {
+  height: 90vh;
+}
+
+button {
+  cursor: pointer;
+}

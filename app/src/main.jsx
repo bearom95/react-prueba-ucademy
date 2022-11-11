@@ -14,10 +14,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter basename="/">
       <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<LoginPage />} />
-          <Route path="dashboard/students" element={<Students />} />
-          <Route path="dashboard/teachers" element={<Teachers />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/dashboard" element={<App />}>
+          <Route path="students" element={<Students />} />
+          <Route path="teachers" element={<Teachers />} />
           <Route path="*" element={<Notfound />} />
         </Route>
       </Routes>
