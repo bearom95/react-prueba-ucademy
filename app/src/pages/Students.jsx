@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import { getData } from '../api/api';
@@ -7,19 +7,21 @@ import { Button } from '../components/Button';
 import { ImgModalInfo } from '../components/Modals/ModalInfo';
 import { ImgModalNew } from '../components/Modals/ModalNewUser';
 import { Table, Td, Thead, Tr } from '../components/Table';
-/* import { Img } from '../componentsui/Img'; */
 import { Parraf } from '../componentsui/Parraf';
 import { Div } from '../componentsui/StyledDiv';
+import GeneralContext from '../Context/GeneralContext';
 
+export const UserContext = createContext();
 export const Students = () => {
   const [estudiantes, setStudents] = useState([]);
+  const { rechargeStudents } = useContext(GeneralContext);
 
   useEffect(() => {
     (async () => {
       const allstudents = await getData('students');
       setStudents(allstudents);
     })();
-  }, [JSON.stringify(estudiantes)]);
+  }, [JSON.stringify(estudiantes), rechargeStudents]);
 
   console.log(estudiantes);
 
@@ -50,7 +52,9 @@ export const Students = () => {
           <Td>{item.email}</Td>
           <Td>{item.phone}</Td>
           <Td>
-            <ImgModalInfo item={item} cursor="pointer" />
+            <UserContext.Provider value={item}>
+              <ImgModalInfo item={item} />
+            </UserContext.Provider>
           </Td>
         </Tr>
       );

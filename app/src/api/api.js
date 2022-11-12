@@ -1,3 +1,5 @@
+/* import axios from 'axios'; */
+
 //a getData igual se le puede cambiar el nombre por getUsers y se le pasa por parametro teachers y students
 
 export const getData = async (endpoint) => {
