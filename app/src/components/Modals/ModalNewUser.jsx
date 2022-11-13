@@ -29,9 +29,8 @@ export const ImgModalNew = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState(0);
   const { rechargeStudents, setRechargeStudents } = useContext(GeneralContext);
-
-  /* const current = new Date();
-  const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`; */
+  const today = new Date();
+  const date = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
 
   const navigate = useNavigate();
 
@@ -44,15 +43,14 @@ export const ImgModalNew = () => {
       username: username,
       email: email,
       phone: phone,
-      date: 123,
+      date: date,
     };
     postUser('students', item);
     //setemos el valor que tiene setRecharge en su contrario.
     setRechargeStudents(!rechargeStudents);
     navigate('/dashboard/students');
   };
-  //tengo que dar al boton de guardar la funcion de create y post que viene dentro.
-  //Crear contexto y darselo al botón que está en el Modal básico.
+
   return (
     <Popup
       contentStyle={{
@@ -67,7 +65,7 @@ export const ImgModalNew = () => {
     >
       {(close) => (
         <Div>
-          <Div>
+          <Div display="flex" justify="flex-end">
             <Button
               black
               onClick={(ev) => {
@@ -77,27 +75,37 @@ export const ImgModalNew = () => {
               Guardar
             </Button>
           </Div>
-          <Div>
-            <Div display="flex">
-              <Div width="48%" margin="0 2% 0 0" display="flex" flexdir="column">
-                <Parraf fontsize="11px">Nombre</Parraf>
+          <Div padding="3rem 0 11rem 0" display="flex" flexdir="column" align="center">
+            <Div display="flex" padding="0 0 1rem 0" width="382px">
+              <Div width="49%" margin="0 1% 0 0" display="flex" flexdir="column">
+                <Parraf fontsize="11px" padding="0 0 0.4rem 0">
+                  Nombre
+                </Parraf>
                 <InputModal onChange={(ev) => setName(ev.target.value)}></InputModal>
               </Div>
-              <Div width="48%" margin="0 0 0 2%" display="flex" flexdir="column">
-                <Parraf fontsize="11px">Apellidos</Parraf>
+              <Div width="49%" margin="0 0 0 1%" display="flex" flexdir="column">
+                <Parraf fontsize="11px" padding="0 0 0.4rem 0">
+                  Apellidos
+                </Parraf>
                 <InputModal onChange={(ev) => setSurname(ev.target.value)}></InputModal>
               </Div>
             </Div>
-            <Div display="flex" flexdir="column">
-              <Parraf fontsize="11px">Nombre de usuario</Parraf>
+            <Div display="flex" flexdir="column" padding="0 0 1rem 0" width="382px">
+              <Parraf fontsize="11px" padding="0 0 0.4rem 0">
+                Nombre de usuario
+              </Parraf>
               <InputModal onChange={(ev) => setUsername(ev.target.value)}></InputModal>
             </Div>
-            <Div display="flex" flexdir="column">
-              <Parraf fontsize="11px">Email</Parraf>
+            <Div display="flex" flexdir="column" padding="0 0 1rem 0" width="382px">
+              <Parraf fontsize="11px" padding="0 0 0.4rem 0">
+                Email
+              </Parraf>
               <InputModal onChange={(ev) => setEmail(ev.target.value)}></InputModal>
             </Div>
-            <Div display="flex" flexdir="column">
-              <Parraf fontsize="11px">Móvil</Parraf>
+            <Div display="flex" flexdir="column" padding="0 0 1rem 0" width="382px">
+              <Parraf fontsize="11px" padding="0 0 0.4rem 0">
+                Móvil
+              </Parraf>
               <InputModal
                 width="50%"
                 onChange={(ev) => setPhone(ev.target.value)}
@@ -114,11 +122,3 @@ export const ImgModalNew = () => {
     </Popup>
   );
 };
-
-//boton cerrar no necesita el navigate, es el de Guardar, porque al
-//cerrar no volvemos a renderizar los estudiantes, son los que eran
-//se entiende que no se ha guardado ningun cambio y no se ha cambiado el json
-
-/* onClick={() => {
-  close(), navigate('/dashboard/students');
-}} */

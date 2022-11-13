@@ -38,6 +38,7 @@ export const Th = ({ children }) => {
 const TdStyled = styled.td`
   border-bottom: 1px solid #cdcdcd;
   justify-content: flex-start;
+  padding: 0 0.5rem;
 `;
 export const Td = ({ children }) => {
   return <TdStyled>{children}</TdStyled>;

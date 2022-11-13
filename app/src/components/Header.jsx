@@ -6,6 +6,7 @@ import envelope from '../assets/envelope.png';
 import line from '../assets/LineAvatar.png';
 import lupa from '../assets/lupa.png';
 import { Img } from '../componentsui/Img';
+import { Input } from '../componentsui/Input';
 import { Div } from '../componentsui/StyledDiv';
 
 const HeaderStyled = styled.header`
@@ -25,7 +26,13 @@ export const Header = () => {
         <Img src="../../public/Logo.png" alt="ucademy logo white" display="block" />
         <Div align="center" display="flex">
           <Img src={lupa} alt="lupa icon" />
-          <input type="text" />
+          <Input
+            type="text"
+            all="unset"
+            placeholder="Buscar"
+            border="none"
+            backgr="inherit"
+          />
         </Div>
       </Div>
       <Div align="center" display="flex" padding="1rem">

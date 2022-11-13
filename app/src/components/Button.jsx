@@ -1,10 +1,7 @@
 import styled, { css } from 'styled-components';
 
-//cursor pointer no funciona
-
 export const StyledButton = styled.button`
   height: 1rem;
-  cursor: pointer;
 
   ${({ eye }) => {
     if (eye) {
@@ -32,6 +29,7 @@ export const StyledButton = styled.button`
         background-color: var(--green);
         display: flex;
         flex-wrap: wrap;
+        cursor: pointer;
       `;
     }
   }}
@@ -46,6 +44,7 @@ export const StyledButton = styled.button`
         font-size: 12.8px;
         border-radius: 8px;
         height: 20.8px;
+        cursor: pointer;
       `;
     }
   }}
@@ -62,6 +61,7 @@ export const StyledButton = styled.button`
         height: 20.8px;
         box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
         border: 1px solid #262d34;
+        cursor: pointer;
       `;
     }
   }}
@@ -75,6 +75,7 @@ ${({ underlined }) => {
         font-family: 'Poppins', sans-serif;
         font-size: 12.8px;
         height: 25.8px;
+        cursor: pointer;
         :hover,
         :focus {
           text-decoration: var(--green) underline 5px;
@@ -101,7 +102,8 @@ ${({ underlined }) => {
         font-weight: 600;
         gap: 0.6rem;
         font-size: 15px;
-        margin: 1rem 0rem;
+        margin: 1rem 0.2rem;
+        cursor: pointer;
         :hover,
         :focus {
           box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);

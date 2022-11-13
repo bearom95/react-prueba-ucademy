@@ -23,8 +23,6 @@ export const Students = () => {
     })();
   }, [JSON.stringify(estudiantes), rechargeStudents]);
 
-  console.log(estudiantes);
-
   const renderHeader = () => {
     return (
       <Thead borderbottom="2px solid #262d34">
@@ -44,7 +42,21 @@ export const Students = () => {
     return estudiantes.map((item) => {
       return (
         <Tr key={uuidv4()}>
-          <Td>offline</Td>
+          <Td>
+            <button
+              style={{
+                all: 'unset',
+                'font-weight': 300,
+                'font-size': '10px',
+                padding: '0.1rem',
+                border: '0.5px solid #9E9E9E',
+                'border-radius': '5px',
+                'background-color': '#F0F4F3',
+              }}
+            >
+              Offline
+            </button>
+          </Td>
           <Td>
             {item.name} {item.surname}
           </Td>

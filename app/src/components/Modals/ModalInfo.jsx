@@ -1,19 +1,13 @@
 import 'reactjs-popup/dist/index.css';
 
 import React from 'react';
-/* import { useContext } from 'react'; */
 import { useState } from 'react';
 import Popup from 'reactjs-popup';
 import styled from 'styled-components';
 
 import info from '../../assets/info.png';
-/* import mobile from '../../assets/mobile-notch.png';
-import defaultimage from '../../assets/profiledefault.png';
-import personilla from '../../assets/user.png'; */
 import { Img } from '../../componentsui/Img';
-/* import { Parraf } from '../../componentsui/Parraf'; */
 import { Div } from '../../componentsui/StyledDiv';
-/* import { UserContext } from '../../pages/Students'; */
 import { Button } from '../Button';
 import { CardCourses } from './CardCourses';
 import { CardEdition } from './CardEdition';
@@ -23,8 +17,6 @@ const ModalDivStyled = styled.div`
   /* height: 611px; */
   border: none;
 `;
-
-//quitar los onclick clse de los botones que no corresponda
 
 export const ImgModalInfo = () => {
   const [minipage, setMiniPage] = useState('profile');
@@ -37,7 +29,7 @@ export const ImgModalInfo = () => {
         borderRadius: '5px',
         padding: '1rem',
       }}
-      trigger={<Img src={info} alt="info logo" />}
+      trigger={<Img src={info} alt="info logo" cursor="pointer" />}
       modal
       nested
     >
@@ -58,8 +50,13 @@ export const ImgModalInfo = () => {
                   Editar estudiante
                 </Button>
               ) : minipage == 'edition' ? (
-                <Div>
-                  <Button black onClick={() => setMiniPage('profile')}>
+                <Div
+                  display="flex"
+                  flexwrap="wrap"
+                  justify="space-between"
+                  width="14.5rem"
+                >
+                  <Button white onClick={() => setMiniPage('profile')}>
                     Cancelar Edición
                   </Button>
                   <Button

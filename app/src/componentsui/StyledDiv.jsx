@@ -21,6 +21,7 @@ export const StyledDiv = styled.div`
       margin,
       align,
       borderbottom,
+      gap,
     } = props;
     return css`
       background-color: ${backgr};
@@ -39,6 +40,7 @@ export const StyledDiv = styled.div`
       margin: ${margin};
       align-items: ${align};
       border-bottom: ${borderbottom};
+      gap: ${gap};
     `;
   }}
 `;

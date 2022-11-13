@@ -19,7 +19,8 @@ const StyledDivDrop = styled.div`
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 13px;
-    padding: 1rem 2rem 0.5rem 5rem;
+    padding: 1rem 1rem 0.5rem 4rem;
+    cursor: pointer;
   }
   .navlink:hover,
   .navlink:focus {
@@ -42,7 +43,7 @@ export const DivDropDown = () => {
       </Button>
       {showMoreChildren ? (
         <Div display="flex" flexwrap="wrap" flexdir="column">
-          <NavLink className="navlink" to="/">
+          <NavLink className="navlink" to="/dashboard/students">
             Editar Academia
           </NavLink>
           <NavLink className="navlink" to="/dashboard/students">

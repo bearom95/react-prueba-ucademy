@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { useContext, useState } from 'react';
 
-/* import { useNavigate } from 'react-router-dom'; */
 import { InputModal } from '../../componentsui/Input';
 import { Parraf } from '../../componentsui/Parraf';
 import { Div } from '../../componentsui/StyledDiv';
 import GeneralContext from '../../Context/GeneralContext';
 import { UserContext } from '../../pages/Students';
+import { Button } from '../Button';
 
 const saveModifiedUser = async (endpoint, item) => {
   axios({
@@ -25,8 +25,6 @@ export const CardEdition = () => {
   const [phone, setPhone] = useState(item.phone);
   const { rechargeStudents, setRechargeStudents } = useContext(GeneralContext);
 
-  /* const navigate = useNavigate(); */
-
   const modifyUser = (ev) => {
     ev.preventDefault();
     const student = {
@@ -40,57 +38,73 @@ export const CardEdition = () => {
     saveModifiedUser('students', student);
     //setemos el valor que tiene setRecharge en su contrario.
     setRechargeStudents(!rechargeStudents);
-    /* navigate('/dashboard/students'); */
   };
 
   return (
-    <Div>
-      <Div display="flex">
-        <Div width="48%" margin="0 2% 0 0" display="flex" flexdir="column">
-          <Parraf fontsize="11px">Nombre</Parraf>
+    <Div
+      padding="3rem 0 11rem 0"
+      display="flex"
+      justify="center"
+      flexdir="column"
+      align="center"
+    >
+      <Div display="flex" padding="0 0 1rem 0" width="382px">
+        <Div width="49%" margin="0 1% 0 0" display="flex" flexdir="column">
+          <Parraf fontsize="11px" padding="0 0 0.4rem 0">
+            Nombre
+          </Parraf>
           <InputModal
             value={name}
             onChange={(ev) => setName(ev.target.value)}
           ></InputModal>
         </Div>
-        <Div width="48%" margin="0 0 0 2%" display="flex" flexdir="column">
-          <Parraf fontsize="11px">Apellidos</Parraf>
+        <Div width="49%" margin="0 0 0 1%" display="flex" flexdir="column">
+          <Parraf fontsize="11px" padding="0 0 0.4rem 0">
+            Apellidos
+          </Parraf>
           <InputModal
             value={surname}
             onChange={(ev) => setSurname(ev.target.value)}
           ></InputModal>
         </Div>
       </Div>
-      <Div display="flex" flexdir="column">
-        <Parraf fontsize="11px">Nombre de usuario</Parraf>
+      <Div display="flex" flexdir="column" padding="0 0 1rem 0" width="382px">
+        <Parraf fontsize="11px" padding="0 0 0.4rem 0">
+          Nombre de usuario
+        </Parraf>
         <InputModal
           value={username}
           onChange={(ev) => setUsername(ev.target.value)}
         ></InputModal>
       </Div>
-      <Div display="flex" flexdir="column">
-        <Parraf fontsize="11px">Email</Parraf>
+      <Div display="flex" flexdir="column" padding="0 0 1rem 0" width="382px">
+        <Parraf fontsize="11px" padding="0 0 0.4rem 0">
+          Email
+        </Parraf>
         <InputModal
           value={email}
           onChange={(ev) => setEmail(ev.target.value)}
         ></InputModal>
       </Div>
-      <Div display="flex" flexdir="column">
-        <Parraf fontsize="11px">Móvil</Parraf>
+      <Div display="flex" flexdir="column" padding="0 0 1rem 0" width="382px">
+        <Parraf fontsize="11px" padding="0 0 0.4rem 0">
+          Móvil
+        </Parraf>
         <InputModal
           width="50%"
           value={phone}
           onChange={(ev) => setPhone(ev.target.value)}
         ></InputModal>
       </Div>
-      <Div>
-        <button
+      <Div width="382px">
+        <Button
+          black
           onClick={(ev) => {
             modifyUser(ev);
           }}
         >
-          guardar pero tiene que ser el otro boton que está fuera
-        </button>
+          Falso guardar
+        </Button>
       </Div>
     </Div>
   );

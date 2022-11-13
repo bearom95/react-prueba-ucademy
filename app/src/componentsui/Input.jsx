@@ -1,14 +1,21 @@
 import styled, { css } from 'styled-components';
 
 export const StyledInput = styled.input`
+  ::placeholder {
+    font-family: 'Poppins';
+    padding: 0 0 0 0.7rem;
+    color: white;
+  }
   ${(props) => {
-    const { backgr, display, flexwrap, flexdir, objectfit } = props;
+    const { backgr, display, flexwrap, flexdir, objectfit, all, border } = props;
     return css`
       background-color: ${backgr};
       display: ${display};
       flex-wrap: ${flexwrap};
       flex-direction: ${flexdir};
       object-fit: ${objectfit};
+      all: ${all};
+      border: ${border};
     `;
   }}
 `;

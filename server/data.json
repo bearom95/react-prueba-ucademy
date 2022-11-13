@@ -2,7 +2,7 @@
   "students": [
     {
       "id": 1,
-      "name": "Ikerito",
+      "name": "Iker",
       "surname": "Romero",
       "username": "iromero1",
       "email": "iker@gmail.com",
@@ -17,10 +17,10 @@
     },
     {
       "id": 2,
-      "name": "Marioussss",
-      "surname": "monti",
-      "username": "mmonti",
-      "email": "mmonti@gmail.com",
+      "name": "Mario",
+      "surname": "Muñoz",
+      "username": "mmunoz12",
+      "email": "mmunoz@gmail.com",
       "phone": "669781235",
       "date": "01-04-2020",
       "online": false,
@@ -58,166 +58,22 @@
       ]
     },
     {
-      "id": "9c1561ef-7e46-4867-89c7-cbb5134af716",
-      "name": "Beatrice",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
+      "id": "e341e545-c404-43fb-93cd-db890a5b579a",
+      "name": "Pepa",
+      "surname": "Pig",
+      "username": "pepigggg",
+      "email": "pepig87@gmail.com",
+      "phone": "669521548",
       "date": 123
     },
     {
-      "id": "3c3dcb90-6f24-4430-a1cb-01337033139d",
-      "name": "Bea",
-      "surname": "sdcds",
-      "username": "csdcds",
-      "email": "sdc",
-      "phone": "sdcd",
-      "date": 123
-    },
-    {
-      "id": "065dade4-054e-4d08-a18b-78234a64bef3",
-      "name": "beusa",
-      "surname": "sdfvc",
-      "username": "sdfc",
-      "email": "sdc",
-      "phone": "asd",
-      "date": 123
-    },
-    {
-      "id": "6ff2aa42-ec4e-46d4-9dd8-f760e6f50b22",
-      "name": "beusa",
-      "surname": "sdfvc",
-      "username": "sdfc",
-      "email": "sdc",
-      "phone": "asd",
-      "date": 123
-    },
-    {
-      "id": "a6789ab2-e1d6-44b5-b7a0-ce0155d41dca",
-      "name": "ergr",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "ac79af65-7dbb-4d07-9091-6da4303c9824",
-      "name": "wesrfewqaew",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "24464dbf-13a9-4790-b95c-25547b7db9d3",
-      "name": "otro useeeeer",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "16841dcb-d3af-4596-93c3-602355fafa27",
-      "name": "Otromas",
-      "surname": "qwedf",
-      "username": "waed",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "0ba8b79f-2f50-4953-a678-bcfa14fe35a5",
-      "name": "a ver si funciona",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "80823bb2-d018-43a3-b153-1b4526f85f92",
-      "name": "",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "38bd4b6b-4284-4ed7-8fa9-98d56027aa87",
-      "name": "bibibi",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "290a9640-8c5d-48a6-bbdb-8fbd3a7bef11",
-      "name": "andres",
-      "surname": "fasr",
-      "username": "wedf",
-      "email": "wef",
-      "phone": "wedf",
-      "date": 123
-    },
-    {
-      "id": "53632f59-83a4-44b2-a2e8-e6bed238d15b",
-      "name": "",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "306784ad-6c3a-4368-b09a-ccec338923e6",
-      "name": "holahola",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "c9342957-93a2-4ffd-b49f-598293343689",
-      "name": "Pepitaaaaaaaaa",
-      "surname": "sdc",
-      "username": "asd",
-      "email": "asd",
-      "phone": "asd",
-      "date": 123
-    },
-    {
-      "id": "7da9c5c4-7fd2-43ef-af27-1b0f119196a1",
-      "name": "holahola",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "23229ce6-7812-46fc-9a8c-469739dc5118",
-      "name": "Pepito",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
-    },
-    {
-      "id": "343d1612-7ac0-4d43-ac24-f98e360ad6f3",
-      "name": "kroke",
-      "surname": "",
-      "username": "",
-      "email": "",
-      "phone": 0,
-      "date": 123
+      "id": "c8704ecd-4dc5-449b-b277-214a3be49284",
+      "name": "Aladdin",
+      "surname": "Din Din",
+      "username": "alibaba",
+      "email": "aladinotomavino@gmail.com",
+      "phone": "558432165",
+      "date": "13/11/2022"
     }
   ],
   "teachers": [

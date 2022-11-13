@@ -7,17 +7,10 @@ import styled from 'styled-components';
 import UcademyLogo from '../assets/logo_ucademy.svg';
 import { Anchor } from '../componentsui/Anchor';
 import { Img } from '../componentsui/Img';
-/* import { Input } from '../componentsui/Input'; */
 import { Label } from '../componentsui/Label';
 import { Parraf } from '../componentsui/Parraf';
 import { Div } from '../componentsui/StyledDiv';
 import { Button } from './Button';
-/* const LoginStyledDiv = styled.div`
-  button {
-    all: unset;
-  }
-
-`; */
 
 export const StyledForm = styled.form`
   height: 17.7rem;
@@ -36,6 +29,7 @@ export const StyledForm = styled.form`
     border-radius: 8px;
     height: 2.5rem;
   }
+
   .passinput {
     all: unset;
     border: none;
@@ -52,6 +46,7 @@ export const StyledForm = styled.form`
     width: 16px;
     height: 16px;
   }
+
   .checkbox:checked {
     accent-color: grey;
   }
@@ -112,7 +107,7 @@ export const Login = () => {
           />
           {errors.username ? (
             <Parraf className="error" fontcolor="red">
-              This field is required and must have at least 2 characters
+              Este campo es obligatorio y debe tener al menos 2 caracteres
             </Parraf>
           ) : null}
         </Label>
@@ -173,8 +168,8 @@ export const Login = () => {
             <Parraf className="error" fontcolor="red">
               {/* si el tipo de errores es de formato */}
               {errors.password.type === 'format'
-                ? 'Password must contain at least an upper case, a lower case and a number.'
-                : 'This field is required and must have at least 6 characters'}
+                ? 'La contraseña debe contener al menos una mayúscula, una minúscula y un número'
+                : 'Este campo es obligatorio y debe tener al menos 6 caracteres'}
             </Parraf>
           ) : null}
         </Label>

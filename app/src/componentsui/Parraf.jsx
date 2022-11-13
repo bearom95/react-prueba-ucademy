@@ -4,14 +4,23 @@ const ParrafStyled = styled.p`
   color: black;
 
   ${(props) => {
-    const { backgr, fontcolor, fontsize, fontfamily, padding, fontweight, lineheight } =
-      props;
+    const {
+      backgr,
+      fontcolor,
+      fontsize,
+      fontfamily,
+      padding,
+      margin,
+      fontweight,
+      lineheight,
+    } = props;
     return css`
       background-color: ${backgr};
       color: ${fontcolor};
       font-size: ${fontsize};
       font-family: ${fontfamily};
       padding: ${padding};
+      margin: ${margin};
       font-weight: ${fontweight};
       line-height: ${lineheight};
     `;
@@ -21,7 +30,3 @@ const ParrafStyled = styled.p`
 export const Parraf = (props) => {
   return <ParrafStyled {...props}></ParrafStyled>;
 };
-
-//spread operator te retorna cada entrada de un objeto o un array.
-// El SO vacia el objeto, le pasa en las keys los valores que le indico
-//y react recoge las keys.
